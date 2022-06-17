@@ -1,0 +1,35 @@
+package main
+
+import (
+	"fmt"
+	sf "github.com/bwmarrin/snowflake"
+	"time"
+)
+
+//调用直接生成的id
+var node *sf.Node
+
+//传来上线的时间，整个分布式系统有关表示
+func Init(startTime string, machineID int64) (err error) {
+	var st time.Time
+	st, err = time.Parse("2006-01-02", startTime)
+	if err != nil {
+		return
+	}
+	sf.Epoch = st.UnixNano() / 1000000
+	node, err = sf.NewNode(machineID)
+	return
+}
+
+func GenID() int64 {
+	return node.Generate().Int64()
+}
+
+func main() {
+	if err := Init("2020-07-01", 1); err != nil {
+		fmt.Printf("init failed,err:%v\n", err)
+		return
+	}
+	id := GenID()
+	fmt.Println(id)
+}
