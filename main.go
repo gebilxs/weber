@@ -12,6 +12,7 @@ import (
 	"weber/dao/mysql"
 	"weber/dao/redis"
 	"weber/logger"
+	"weber/pkg/snowflake"
 	"weber/routes"
 	"weber/setting"
 
@@ -19,8 +20,6 @@ import (
 
 	"go.uber.org/zap"
 )
-
-//CLD 脚手架
 
 func main() {
 	//1.加载配置文件
@@ -47,13 +46,20 @@ func main() {
 		fmt.Printf("init redis error: %v\n", err)
 		return
 	}
+
 	defer redis.Close()
+
+	//初始化雪花函数
+	if err := snowflake.Init(setting.Conf.StartTime, setting.Conf.MachineID); err != nil {
+		fmt.Printf("init snowflake error: %v\n", err)
+		return
+	}
 	//5.注册路由
 
 	r := routes.Setup()
 	//6.启动服务（优雅关机）
 	srv := &http.Server{
-		Addr:    fmt.Sprintf(":%d", viper.GetInt("app.port")),
+		Addr:    fmt.Sprintf(":%d", viper.GetInt("port")),
 		Handler: r,
 	}
 
@@ -65,13 +71,15 @@ func main() {
 	}()
 
 	// 等待中断信号来优雅地关闭服务器，为关闭服务器操作设置一个5秒的超时
-	quit := make(chan os.Signal, 1) // 创建一个接收信号的通道
+	//quit := make(chan os.Signal, 1) // 创建一个接收信号的通道
 	// kill 默认会发送 syscall.SIGTERM 信号
 	// kill -2 发送 syscall.SIGINT 信号，我们常用的Ctrl+C就是触发系统SIGINT信号
 	// kill -9 发送 syscall.SIGKILL 信号，但是不能被捕获，所以不需要添加它
 	// signal.Notify把收到的 syscall.SIGINT或syscall.SIGTERM 信号转发给quit
-	signal.Notify(quit, syscall.SIGINT, syscall.SIGTERM) // 此处不会阻塞
-	<-quit                                               // 阻塞在此，当接收到上述两种信号时才会往下执行
+	//signal.Notify(setting.Quit, syscall.SIGINT, syscall.SIGTERM) // 此处不会阻塞
+	signal.Notify(setting.Quit) //任意即可
+	//go End(setting.Quit)
+	<-setting.Quit // 阻塞在此，当接收到上述两种信号时才会往下执行
 	zap.L().Info("Shutdown Server ...")
 	// 创建一个5秒超时的context
 	ctx, cancel := context.WithTimeout(context.Background(), 5*time.Second)
@@ -85,3 +93,7 @@ func main() {
 }
 
 //存在supervior 的时候不适用
+func End(ch chan os.Signal) {
+	time.Sleep(10 * time.Second)
+	ch <- syscall.SIGINT
+}

@@ -1,8 +1,10 @@
-app:
-  name: "weber"
-  mode: "dev"
-  port: 8081
-  version: "v1.0.0"
+##current app conf
+name: "weber"
+mode: "dev"
+port: 8888
+version: "v1.0.0"
+start_time: "2020-07-01"
+machine_id: 1
 
 log:
   level: "debug"

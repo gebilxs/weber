@@ -2,6 +2,7 @@ package setting
 
 import (
 	"fmt"
+	"os"
 
 	"github.com/fsnotify/fsnotify"
 
@@ -9,16 +10,37 @@ import (
 )
 
 //全局变量用于保存程序所有的配置信息
-var Conf = new(AppConfig)
+var Conf = new(Config)
 
-type AppConfig struct {
-	Name         string `mapstructure:"name"`
-	Mode         string `mapstructure:"mode"`
-	Version      string `mapstructure:"version"`
-	Port         string `mapstructure:"port"`
-	*LogConfig   `mapstructure:"log"`
+var Quit = make(chan os.Signal, 1)
+
+type Config struct {
+	//结构对应config.yaml
+	//name: "weber"
+	//mode: "dev"
+	//port: 8081
+	//version: "v1.0.0"
+	//start_time: "2020-07-01"
+	//machine_id: 1
+	Name      string `mapstructure:"name"`
+	Mode      string `mapstructure:"mode"`
+	Version   string `mapstructure:"version"`
+	StartTime string `mapstructure:"start_time"`
+	MachineID int64  `mapstructure:"machine_id"`
+	Port      int    `mapstructure:"port"`
+	//*AppConfig   `mapstructure:"app"`
+	*LogConfig   `mapstructure:"log"` //mapstructure tag的值对应config.yaml的配置树顶点
 	*MySQLConfig `mapstructure:"mysql"`
 	*RedisConfig `mapstructure:"redis"`
+}
+
+type AppConfig struct {
+	Name      string `mapstructure:"name"`
+	Mode      string `mapstructure:"mode"`
+	Version   string `mapstructure:"version"`
+	StartTime string `mapstructure:"start_time"`
+	MachineID int64  `mapstructure:"machine_id"`
+	Port      int    `mapstructure:"port"`
 }
 
 type LogConfig struct {
@@ -57,8 +79,9 @@ func Init() (err error) {
 	viper.AddConfigPath("/etc/appname/=") // 查找配置文件所在的路径
 	viper.AddConfigPath("$HOME/.appname") // 多次调用以添加多个搜索路径
 	viper.AddConfigPath(".")              // 还可以在工作目录中查找配置
-	err = viper.ReadInConfig()            // 查找并读取配置文件
-	if err != nil {                       // 处理读取配置文件的错误
+	//FIX THIS: 初始化全局conf
+	err = viper.ReadInConfig() // 查找并读取配置文件
+	if err != nil {            // 处理读取配置文件的错误
 
 		fmt.Printf("viper.ReadInConfig failed,err:%v\n", err)
 		return

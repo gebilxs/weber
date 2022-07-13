@@ -1,8 +1,11 @@
 package routes
 
 import (
+	"fmt"
 	"net/http"
+	"syscall"
 	"weber/logger"
+	"weber/setting"
 
 	"github.com/gin-gonic/gin"
 )
@@ -13,6 +16,11 @@ func Setup() *gin.Engine {
 	r.Use(logger.GinLogger(), logger.GinRecovery(true))
 
 	r.GET("/", func(c *gin.Context) {
+		c.String(http.StatusOK, "OK")
+	})
+	r.GET("/end", func(c *gin.Context) {
+		fmt.Println("手动调接口关闭")
+		setting.Quit <- syscall.Signal(10000000)
 		c.String(http.StatusOK, "OK")
 	})
 	return r

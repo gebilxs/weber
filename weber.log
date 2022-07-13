@@ -1,0 +1,23 @@
+{"level":"INFO","time":"2022-07-13T21:32:37.463+0800","caller":"logger/logger.go:71","msg":"/","status":200,"method":"GET","path":"/","query":"","ip":"::1","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36","errors":"","cost":0.0009972}
+{"level":"INFO","time":"2022-07-13T21:33:54.619+0800","caller":"weber/main.go:81","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2022-07-13T21:33:54.621+0800","caller":"weber/main.go:90","msg":"Server exiting"}
+{"level":"INFO","time":"2022-07-13T21:53:45.620+0800","caller":"weber/main.go:81","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2022-07-13T21:53:45.667+0800","caller":"weber/main.go:90","msg":"Server exiting"}
+{"level":"INFO","time":"2022-07-13T23:24:42.310+0800","caller":"weber/main.go:81","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2022-07-13T23:24:42.347+0800","caller":"weber/main.go:90","msg":"Server exiting"}
+{"level":"INFO","time":"2022-07-13T23:26:28.957+0800","caller":"weber/main.go:81","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2022-07-13T23:26:28.990+0800","caller":"weber/main.go:90","msg":"Server exiting"}
+{"level":"INFO","time":"2022-07-13T23:32:47.772+0800","caller":"weber/main.go:82","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2022-07-13T23:32:47.804+0800","caller":"weber/main.go:91","msg":"Server exiting"}
+{"level":"INFO","time":"2022-07-13T23:33:26.571+0800","caller":"weber/main.go:82","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2022-07-13T23:33:39.186+0800","caller":"weber/main.go:91","msg":"Server exiting"}
+{"level":"INFO","time":"2022-07-13T23:42:48.429+0800","caller":"logger/logger.go:71","msg":"/get","status":404,"method":"GET","path":"/get","query":"","ip":"127.0.0.1","user-agent":"Mozilla/5.0 (Windows NT; Windows NT 10.0; zh-CN) WindowsPowerShell/5.1.22000.653","errors":"","cost":0}
+{"level":"INFO","time":"2022-07-13T23:43:26.217+0800","caller":"logger/logger.go:71","msg":"/end","status":200,"method":"GET","path":"/end","query":"","ip":"127.0.0.1","user-agent":"Mozilla/5.0 (Windows NT; Windows NT 10.0; zh-CN) WindowsPowerShell/5.1.22000.653","errors":"","cost":0}
+{"level":"INFO","time":"2022-07-13T23:43:26.217+0800","caller":"weber/main.go:82","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2022-07-13T23:43:26.225+0800","caller":"weber/main.go:91","msg":"Server exiting"}
+{"level":"INFO","time":"2022-07-13T23:44:28.983+0800","caller":"weber/main.go:82","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2022-07-13T23:44:28.984+0800","caller":"logger/logger.go:71","msg":"/end","status":200,"method":"GET","path":"/end","query":"","ip":"127.0.0.1","user-agent":"Mozilla/5.0 (Windows NT; Windows NT 10.0; zh-CN) WindowsPowerShell/5.1.22000.653","errors":"","cost":0.0015424}
+{"level":"INFO","time":"2022-07-13T23:44:29.017+0800","caller":"weber/main.go:91","msg":"Server exiting"}
+{"level":"INFO","time":"2022-07-13T23:51:38.900+0800","caller":"weber/main.go:83","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2022-07-13T23:51:38.900+0800","caller":"logger/logger.go:71","msg":"/end","status":200,"method":"GET","path":"/end","query":"","ip":"127.0.0.1","user-agent":"Mozilla/5.0 (Windows NT; Windows NT 10.0; zh-CN) WindowsPowerShell/5.1.22000.653","errors":"","cost":0.0010062}
+{"level":"INFO","time":"2022-07-13T23:51:38.922+0800","caller":"weber/main.go:92","msg":"Server exiting"}

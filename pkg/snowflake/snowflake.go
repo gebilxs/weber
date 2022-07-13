@@ -1,9 +1,9 @@
-package main
+package snowflake
 
 import (
-	"fmt"
-	sf "github.com/bwmarrin/snowflake"
 	"time"
+
+	sf "github.com/bwmarrin/snowflake"
 )
 
 //调用直接生成的id
@@ -25,11 +25,11 @@ func GenID() int64 {
 	return node.Generate().Int64()
 }
 
-func main() {
-	if err := Init("2020-07-01", 1); err != nil {
-		fmt.Printf("init failed,err:%v\n", err)
-		return
-	}
-	id := GenID()
-	fmt.Println(id)
-}
+//func main() {
+//	if err := Init("2020-07-01", 1); err != nil {
+//		fmt.Printf("init failed,err:%v\n", err)
+//		return
+//	}
+//	id := GenID()
+//	fmt.Println(id)
+//}
