@@ -9,6 +9,7 @@ import (
 	"os/signal"
 	"syscall"
 	"time"
+	"weber/controllers"
 	"weber/dao/mysql"
 	"weber/dao/redis"
 	"weber/logger"
@@ -52,6 +53,12 @@ func main() {
 	//初始化雪花函数
 	if err := snowflake.Init(setting.Conf.StartTime, setting.Conf.MachineID); err != nil {
 		fmt.Printf("init snowflake error: %v\n", err)
+		return
+	}
+
+	//注册翻译机
+	if err := controllers.InitTrans("zh"); err != nil {
+		fmt.Printf("init	Validator trans failed,err:%v\n", err)
 		return
 	}
 	//5.注册路由

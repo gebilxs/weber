@@ -12,6 +12,7 @@ import (
 )
 
 func Setup() *gin.Engine {
+
 	gin.SetMode(gin.ReleaseMode)
 	r := gin.New()
 	r.Use(logger.GinLogger(), logger.GinRecovery(true))

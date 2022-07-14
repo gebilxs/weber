@@ -30,3 +30,52 @@
 {"level":"INFO","time":"2022-07-14T16:09:27.137+0800","caller":"logger/logger.go:71","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.29.0","errors":"","cost":0.0008886}
 {"level":"INFO","time":"2022-07-14T16:17:37.321+0800","caller":"weber/main.go:83","msg":"Shutdown Server ..."}
 {"level":"INFO","time":"2022-07-14T16:17:37.364+0800","caller":"weber/main.go:92","msg":"Server exiting"}
+{"level":"ERROR","time":"2022-07-14T16:33:08.000+0800","caller":"controllers/user.go:21","msg":"SignUp with invalid params","error":"invalid character '}' looking for beginning of object key string"}
+{"level":"INFO","time":"2022-07-14T16:33:08.864+0800","caller":"logger/logger.go:71","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.29.0","errors":"","cost":0.8645645}
+{"level":"ERROR","time":"2022-07-14T16:33:21.079+0800","caller":"controllers/user.go:30","msg":"SignUp with invalid params"}
+{"level":"INFO","time":"2022-07-14T16:33:21.080+0800","caller":"logger/logger.go:71","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.29.0","errors":"","cost":0}
+{"level":"INFO","time":"2022-07-14T16:33:27.821+0800","caller":"logger/logger.go:71","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.29.0","errors":"","cost":0}
+{"level":"INFO","time":"2022-07-14T16:42:51.822+0800","caller":"weber/main.go:83","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2022-07-14T16:42:51.844+0800","caller":"weber/main.go:92","msg":"Server exiting"}
+{"level":"ERROR","time":"2022-07-14T16:43:10.447+0800","caller":"controllers/user.go:21","msg":"SignUp with invalid params","error":"invalid character '/' looking for beginning of object key string"}
+{"level":"INFO","time":"2022-07-14T16:43:10.531+0800","caller":"logger/logger.go:71","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.29.0","errors":"","cost":0.0834283}
+{"level":"ERROR","time":"2022-07-14T16:43:20.992+0800","caller":"controllers/user.go:21","msg":"SignUp with invalid params","error":"invalid character '/' after object key:value pair"}
+{"level":"INFO","time":"2022-07-14T16:43:20.993+0800","caller":"logger/logger.go:71","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.29.0","errors":"","cost":0.0005384}
+{"level":"ERROR","time":"2022-07-14T16:43:29.448+0800","caller":"controllers/user.go:21","msg":"SignUp with invalid params","error":"Key: 'ParamSignUp.RePassword' Error:Field validation for 'RePassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2022-07-14T16:43:29.448+0800","caller":"logger/logger.go:71","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.29.0","errors":"","cost":0.0011057}
+{"level":"INFO","time":"2022-07-14T17:06:32.516+0800","caller":"weber/main.go:83","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2022-07-14T17:06:32.526+0800","caller":"weber/main.go:92","msg":"Server exiting"}
+{"level":"ERROR","time":"2022-07-14T17:14:08.080+0800","caller":"controllers/user.go:23","msg":"SignUp with invalid params","error":"Key: 'ParamSignUp.RePassword' Error:Field validation for 'RePassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2022-07-14T17:14:08.224+0800","caller":"logger/logger.go:71","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.29.0","errors":"","cost":0.1454582}
+{"level":"ERROR","time":"2022-07-14T17:16:06.319+0800","caller":"controllers/user.go:23","msg":"SignUp with invalid params","error":"Key: 'ParamSignUp.RePassword' Error:Field validation for 'RePassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2022-07-14T17:16:06.320+0800","caller":"logger/logger.go:71","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.29.0","errors":"","cost":0.000999}
+{"level":"INFO","time":"2022-07-14T17:16:09.523+0800","caller":"weber/main.go:90","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2022-07-14T17:16:09.532+0800","caller":"weber/main.go:99","msg":"Server exiting"}
+{"level":"ERROR","time":"2022-07-14T17:16:22.937+0800","caller":"controllers/user.go:23","msg":"SignUp with invalid params","error":"Key: 'ParamSignUp.re_password' Error:Field validation for 're_password' failed on the 'required' tag"}
+{"level":"INFO","time":"2022-07-14T17:16:23.115+0800","caller":"logger/logger.go:71","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.29.0","errors":"","cost":0.1830221}
+{"level":"ERROR","time":"2022-07-14T17:16:32.211+0800","caller":"controllers/user.go:23","msg":"SignUp with invalid params","error":"Key: 'ParamSignUp.re_password' Error:Field validation for 're_password' failed on the 'required' tag"}
+{"level":"INFO","time":"2022-07-14T17:16:32.214+0800","caller":"logger/logger.go:71","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.29.0","errors":"","cost":0.0026275}
+{"level":"INFO","time":"2022-07-14T17:21:22.955+0800","caller":"weber/main.go:90","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2022-07-14T17:21:22.964+0800","caller":"weber/main.go:99","msg":"Server exiting"}
+{"level":"ERROR","time":"2022-07-14T17:22:19.444+0800","caller":"controllers/user.go:23","msg":"SignUp with invalid params","error":"Key: 'ParamSignUp.re_password' Error:Field validation for 're_password' failed on the 'required' tag"}
+{"level":"INFO","time":"2022-07-14T17:22:19.504+0800","caller":"logger/logger.go:71","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.29.0","errors":"","cost":0.0614717}
+{"level":"ERROR","time":"2022-07-14T17:23:29.659+0800","caller":"controllers/user.go:23","msg":"SignUp with invalid params","error":"invalid character '\"' after object key:value pair"}
+{"level":"INFO","time":"2022-07-14T17:23:29.659+0800","caller":"logger/logger.go:71","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.29.0","errors":"","cost":0}
+{"level":"ERROR","time":"2022-07-14T17:23:34.594+0800","caller":"controllers/user.go:41","msg":"SignUp with invalid params"}
+{"level":"INFO","time":"2022-07-14T17:23:34.594+0800","caller":"logger/logger.go:71","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.29.0","errors":"","cost":0.0011788}
+{"level":"ERROR","time":"2022-07-14T17:24:02.313+0800","caller":"controllers/user.go:41","msg":"SignUp with invalid params"}
+{"level":"INFO","time":"2022-07-14T17:24:02.314+0800","caller":"logger/logger.go:71","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.29.0","errors":"","cost":0.000564}
+{"level":"ERROR","time":"2022-07-14T17:24:06.319+0800","caller":"controllers/user.go:41","msg":"SignUp with invalid params"}
+{"level":"INFO","time":"2022-07-14T17:24:06.320+0800","caller":"logger/logger.go:71","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.29.0","errors":"","cost":0.0007606}
+{"level":"ERROR","time":"2022-07-14T17:24:11.772+0800","caller":"controllers/user.go:23","msg":"SignUp with invalid params","error":"invalid character '}' looking for beginning of object key string"}
+{"level":"INFO","time":"2022-07-14T17:24:11.772+0800","caller":"logger/logger.go:71","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.29.0","errors":"","cost":0}
+{"level":"ERROR","time":"2022-07-14T17:24:16.097+0800","caller":"controllers/user.go:23","msg":"SignUp with invalid params","error":"Key: 'ParamSignUp.re_password' Error:Field validation for 're_password' failed on the 'required' tag"}
+{"level":"INFO","time":"2022-07-14T17:24:16.098+0800","caller":"logger/logger.go:71","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.29.0","errors":"","cost":0.0007735}
+{"level":"ERROR","time":"2022-07-14T17:24:24.258+0800","caller":"controllers/user.go:23","msg":"SignUp with invalid params","error":"invalid character '}' looking for beginning of object key string"}
+{"level":"INFO","time":"2022-07-14T17:24:24.258+0800","caller":"logger/logger.go:71","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.29.0","errors":"","cost":0}
+{"level":"ERROR","time":"2022-07-14T17:24:26.932+0800","caller":"controllers/user.go:41","msg":"SignUp with invalid params"}
+{"level":"INFO","time":"2022-07-14T17:24:26.932+0800","caller":"logger/logger.go:71","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.29.0","errors":"","cost":0}
+{"level":"ERROR","time":"2022-07-14T17:25:42.479+0800","caller":"controllers/user.go:41","msg":"SignUp with invalid params"}
+{"level":"INFO","time":"2022-07-14T17:25:42.479+0800","caller":"logger/logger.go:71","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.29.0","errors":"","cost":0}
+{"level":"INFO","time":"2022-07-14T17:28:56.186+0800","caller":"weber/main.go:90","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2022-07-14T17:28:56.196+0800","caller":"weber/main.go:99","msg":"Server exiting"}
