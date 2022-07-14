@@ -18,7 +18,7 @@ mysql:
   user: "root"
   port: 3306
   password: "123456"
-  dbname: "sql_demo"
+  dbname: "weber"
   max_open_conns: 200
   max_idle_conns: 50
 redis:

@@ -1,7 +1,6 @@
 package controllers
 
 import (
-	"fmt"
 	"net/http"
 	"weber/logic"
 	"weber/models"
@@ -17,6 +16,7 @@ import (
 func SignUpHandler(c *gin.Context) {
 	//1.获取参数和参数校验
 	//use shouldBindJSON
+
 	var p models.ParamSignUp
 	if err := c.ShouldBindJSON(&p); err != nil {
 		//如果请求参数有错误，则直接返回相应
@@ -44,9 +44,13 @@ func SignUpHandler(c *gin.Context) {
 		})
 		return
 	}
-	fmt.Println(p)
 	//2.业务处理
-	logic.SignUp()
+	if err := logic.SignUp(&p); err != nil {
+		c.JSON(http.StatusOK, gin.H{
+			"msg": "注册失败",
+		})
+		return
+	}
 	//3.返回相应
 	c.JSON(http.StatusOK, gin.H{
 		"msg": "success",
