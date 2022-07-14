@@ -26,6 +26,11 @@ func Setup(mode string) *gin.Engine {
 
 	//注册业务路由
 	r.POST("/signup", controllers.SignUpHandler)
+
+	//注册登陆业务
+	r.POST("/login", controllers.LoginHandler)
+
+	//手动关闭接口
 	r.GET("/end", func(c *gin.Context) {
 		fmt.Println("手动调接口关闭")
 		setting.Quit <- syscall.Signal(10000000)
