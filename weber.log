@@ -21,3 +21,8 @@
 {"level":"INFO","time":"2022-07-13T23:51:38.900+0800","caller":"weber/main.go:83","msg":"Shutdown Server ..."}
 {"level":"INFO","time":"2022-07-13T23:51:38.900+0800","caller":"logger/logger.go:71","msg":"/end","status":200,"method":"GET","path":"/end","query":"","ip":"127.0.0.1","user-agent":"Mozilla/5.0 (Windows NT; Windows NT 10.0; zh-CN) WindowsPowerShell/5.1.22000.653","errors":"","cost":0.0010062}
 {"level":"INFO","time":"2022-07-13T23:51:38.922+0800","caller":"weber/main.go:92","msg":"Server exiting"}
+{"level":"INFO","time":"2022-07-13T23:57:49.720+0800","caller":"logger/logger.go:71","msg":"/","status":200,"method":"GET","path":"/","query":"","ip":"::1","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36","errors":"","cost":0}
+{"level":"INFO","time":"2022-07-13T23:57:49.801+0800","caller":"logger/logger.go:71","msg":"/favicon.ico","status":404,"method":"GET","path":"/favicon.ico","query":"","ip":"::1","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36","errors":"","cost":0}
+{"level":"INFO","time":"2022-07-13T23:57:54.113+0800","caller":"logger/logger.go:71","msg":"/end","status":200,"method":"GET","path":"/end","query":"","ip":"::1","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36","errors":"","cost":0}
+{"level":"INFO","time":"2022-07-13T23:57:54.113+0800","caller":"weber/main.go:83","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2022-07-13T23:57:55.268+0800","caller":"weber/main.go:92","msg":"Server exiting"}
