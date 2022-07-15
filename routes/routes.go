@@ -6,6 +6,7 @@ import (
 	"syscall"
 	"weber/controllers"
 	"weber/logger"
+	"weber/middlewares"
 	"weber/setting"
 
 	"github.com/gin-gonic/gin"
@@ -30,6 +31,14 @@ func Setup(mode string) *gin.Engine {
 	//注册登陆业务
 	r.POST("/login", controllers.LoginHandler)
 
+	//登陆的用户才可以访问
+	//把认证的操作放到中间件里面
+	r.GET("/Ping", middlewares.JWTAuthMiddleware(), func(c *gin.Context) {
+		//如果用户登陆了可以走这一条路由,判断请求头中是否有有效的jwt
+		c.String(http.StatusOK, "pong")
+		////如果用户没有登陆那么用户
+		//c.String(http.StatusOK, "请登录")
+	})
 	//手动关闭接口
 	r.GET("/end", func(c *gin.Context) {
 		fmt.Println("手动调接口关闭")

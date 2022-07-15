@@ -127,3 +127,39 @@
 {"level":"INFO","time":"2022-07-14T23:56:13.255+0800","caller":"logger/logger.go:83","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.29.0","errors":"","cost":0.0006552}
 {"level":"INFO","time":"2022-07-15T00:04:55.410+0800","caller":"weber/main.go:90","msg":"Shutdown Server ..."}
 {"level":"INFO","time":"2022-07-15T00:04:55.471+0800","caller":"weber/main.go:99","msg":"Server exiting"}
+{"level":"INFO","time":"2022-07-15T14:04:01.373+0800","caller":"logger/logger.go:83","msg":"","status":200,"method":"CONNECT","path":"","query":"","ip":"::1","user-agent":"","errors":"","cost":0.0009982}
+{"level":"INFO","time":"2022-07-15T14:04:03.320+0800","caller":"logger/logger.go:83","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.29.0","errors":"","cost":0.085647}
+{"level":"INFO","time":"2022-07-15T14:04:10.392+0800","caller":"logger/logger.go:83","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.29.0","errors":"","cost":0.002444}
+{"level":"INFO","time":"2022-07-15T14:04:31.911+0800","caller":"logger/logger.go:83","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.29.0","errors":"","cost":0.0141573}
+{"level":"INFO","time":"2022-07-15T14:04:41.540+0800","caller":"logger/logger.go:83","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.29.0","errors":"","cost":0.001523}
+{"level":"ERROR","time":"2022-07-15T14:04:45.578+0800","caller":"controllers/login.go:38","msg":"logic.Login failed","username":"xck5","error":"密码错误"}
+{"level":"INFO","time":"2022-07-15T14:04:45.582+0800","caller":"logger/logger.go:83","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.29.0","errors":"","cost":0.0040933}
+{"level":"INFO","time":"2022-07-15T14:09:11.080+0800","caller":"logger/logger.go:83","msg":"","status":200,"method":"CONNECT","path":"","query":"","ip":"::1","user-agent":"","errors":"","cost":0}
+{"level":"INFO","time":"2022-07-15T14:13:50.231+0800","caller":"logger/logger.go:83","msg":"","status":200,"method":"CONNECT","path":"","query":"","ip":"::1","user-agent":"","errors":"","cost":0}
+{"level":"INFO","time":"2022-07-15T14:19:00.158+0800","caller":"logger/logger.go:83","msg":"","status":200,"method":"CONNECT","path":"","query":"","ip":"::1","user-agent":"","errors":"","cost":0}
+{"level":"INFO","time":"2022-07-15T14:24:10.269+0800","caller":"logger/logger.go:83","msg":"","status":200,"method":"CONNECT","path":"","query":"","ip":"::1","user-agent":"","errors":"","cost":0}
+{"level":"INFO","time":"2022-07-15T14:28:49.183+0800","caller":"logger/logger.go:83","msg":"","status":200,"method":"CONNECT","path":"","query":"","ip":"::1","user-agent":"","errors":"","cost":0}
+{"level":"INFO","time":"2022-07-15T14:33:59.246+0800","caller":"logger/logger.go:83","msg":"","status":200,"method":"CONNECT","path":"","query":"","ip":"::1","user-agent":"","errors":"","cost":0}
+{"level":"INFO","time":"2022-07-15T14:39:09.143+0800","caller":"logger/logger.go:83","msg":"","status":200,"method":"CONNECT","path":"","query":"","ip":"::1","user-agent":"","errors":"","cost":0}
+{"level":"INFO","time":"2022-07-15T14:43:48.227+0800","caller":"logger/logger.go:83","msg":"","status":200,"method":"CONNECT","path":"","query":"","ip":"::1","user-agent":"","errors":"","cost":0}
+{"level":"INFO","time":"2022-07-15T14:48:58.282+0800","caller":"logger/logger.go:83","msg":"","status":200,"method":"CONNECT","path":"","query":"","ip":"::1","user-agent":"","errors":"","cost":0.000392}
+{"level":"INFO","time":"2022-07-15T14:54:08.166+0800","caller":"logger/logger.go:83","msg":"","status":200,"method":"CONNECT","path":"","query":"","ip":"::1","user-agent":"","errors":"","cost":0.0009015}
+{"level":"INFO","time":"2022-07-15T14:58:47.227+0800","caller":"logger/logger.go:83","msg":"","status":200,"method":"CONNECT","path":"","query":"","ip":"::1","user-agent":"","errors":"","cost":0}
+{"level":"INFO","time":"2022-07-15T15:03:57.297+0800","caller":"logger/logger.go:83","msg":"","status":200,"method":"CONNECT","path":"","query":"","ip":"::1","user-agent":"","errors":"","cost":0}
+{"level":"INFO","time":"2022-07-15T15:09:07.052+0800","caller":"logger/logger.go:83","msg":"","status":200,"method":"CONNECT","path":"","query":"","ip":"::1","user-agent":"","errors":"","cost":0}
+{"level":"INFO","time":"2022-07-15T15:13:46.305+0800","caller":"logger/logger.go:83","msg":"","status":200,"method":"CONNECT","path":"","query":"","ip":"::1","user-agent":"","errors":"","cost":0}
+{"level":"INFO","time":"2022-07-15T15:18:56.169+0800","caller":"logger/logger.go:83","msg":"","status":200,"method":"CONNECT","path":"","query":"","ip":"::1","user-agent":"","errors":"","cost":0.0009968}
+{"level":"INFO","time":"2022-07-15T15:24:06.242+0800","caller":"logger/logger.go:83","msg":"","status":200,"method":"CONNECT","path":"","query":"","ip":"::1","user-agent":"","errors":"","cost":0}
+{"level":"INFO","time":"2022-07-15T15:26:59.722+0800","caller":"weber/main.go:90","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2022-07-15T15:26:59.870+0800","caller":"weber/main.go:99","msg":"Server exiting"}
+{"level":"INFO","time":"2022-07-15T16:33:50.025+0800","caller":"logger/logger.go:83","msg":"","status":200,"method":"CONNECT","path":"","query":"","ip":"::1","user-agent":"","errors":"","cost":0}
+{"level":"INFO","time":"2022-07-15T16:39:00.329+0800","caller":"logger/logger.go:83","msg":"","status":200,"method":"CONNECT","path":"","query":"","ip":"::1","user-agent":"","errors":"","cost":0.0005605}
+{"level":"INFO","time":"2022-07-15T16:44:10.063+0800","caller":"logger/logger.go:83","msg":"","status":200,"method":"CONNECT","path":"","query":"","ip":"::1","user-agent":"","errors":"","cost":0}
+{"level":"ERROR","time":"2022-07-15T16:44:30.420+0800","caller":"controllers/login.go:39","msg":"logic.Login failed","username":"xck5","error":"密码错误"}
+{"level":"INFO","time":"2022-07-15T16:44:30.422+0800","caller":"logger/logger.go:83","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.29.0","errors":"","cost":0.0151789}
+{"level":"INFO","time":"2022-07-15T16:44:34.252+0800","caller":"logger/logger.go:83","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.29.0","errors":"","cost":0.0014164}
+{"level":"INFO","time":"2022-07-15T16:48:49.106+0800","caller":"logger/logger.go:83","msg":"","status":200,"method":"CONNECT","path":"","query":"","ip":"::1","user-agent":"","errors":"","cost":0}
+{"level":"INFO","time":"2022-07-15T16:53:59.197+0800","caller":"logger/logger.go:83","msg":"","status":200,"method":"CONNECT","path":"","query":"","ip":"::1","user-agent":"","errors":"","cost":0}
+{"level":"INFO","time":"2022-07-15T16:59:09.151+0800","caller":"logger/logger.go:83","msg":"","status":200,"method":"CONNECT","path":"","query":"","ip":"::1","user-agent":"","errors":"","cost":0}
+{"level":"INFO","time":"2022-07-15T16:59:57.567+0800","caller":"weber/main.go:90","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2022-07-15T16:59:57.573+0800","caller":"weber/main.go:99","msg":"Server exiting"}
