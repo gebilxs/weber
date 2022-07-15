@@ -118,3 +118,12 @@
 {"level":"INFO","time":"2022-07-14T22:12:20.350+0800","caller":"logger/logger.go:83","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.29.0","errors":"","cost":0.0011352}
 {"level":"INFO","time":"2022-07-14T22:19:39.875+0800","caller":"weber/main.go:90","msg":"Shutdown Server ..."}
 {"level":"INFO","time":"2022-07-14T22:19:39.882+0800","caller":"weber/main.go:99","msg":"Server exiting"}
+{"level":"INFO","time":"2022-07-14T23:55:47.850+0800","caller":"logger/logger.go:83","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.29.0","errors":"","cost":0.0097212}
+{"level":"INFO","time":"2022-07-14T23:56:00.891+0800","caller":"logger/logger.go:83","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.29.0","errors":"","cost":0.009459}
+{"level":"ERROR","time":"2022-07-14T23:56:03.573+0800","caller":"controllers/login.go:35","msg":"logic.Login failed","error":"密码错误"}
+{"level":"INFO","time":"2022-07-14T23:56:03.575+0800","caller":"logger/logger.go:83","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.29.0","errors":"","cost":0.0028455}
+{"level":"ERROR","time":"2022-07-14T23:56:09.802+0800","caller":"controllers/login.go:35","msg":"logic.Login failed","error":"用户不存在"}
+{"level":"INFO","time":"2022-07-14T23:56:09.802+0800","caller":"logger/logger.go:83","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.29.0","errors":"","cost":0.0016411}
+{"level":"INFO","time":"2022-07-14T23:56:13.255+0800","caller":"logger/logger.go:83","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.29.0","errors":"","cost":0.0006552}
+{"level":"INFO","time":"2022-07-15T00:04:55.410+0800","caller":"weber/main.go:90","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2022-07-15T00:04:55.471+0800","caller":"weber/main.go:99","msg":"Server exiting"}

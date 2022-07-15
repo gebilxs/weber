@@ -1,7 +1,8 @@
 package controllers
 
 import (
-	"net/http"
+	"errors"
+	"weber/dao/mysql"
 	"weber/logic"
 	"weber/models"
 
@@ -19,27 +20,36 @@ func LoginHandler(c *gin.Context) {
 		//判断err是不是validator,validatorErrors的错误
 		errs, ok := err.(validator.ValidationErrors)
 		if !ok {
-			c.JSON(http.StatusOK, gin.H{
-				"msg": err.Error(),
-			})
+			//c.JSON(http.StatusOK, gin.H{
+			//	"msg": err.Error(),
+			//})
+			ResponseError(c, CodeInvalidParam)
 			return
 		}
-		c.JSON(http.StatusOK, gin.H{
-			//use translations part
-			"msg": removeTopStruct(errs.Translate(trans)),
-		})
+		ResponseErrorWithMsg(c, CodeInvalidParam, removeTopStruct(errs.Translate(trans)))
+		//c.JSON(http.StatusOK, gin.H{
+		//	//use translations part
+		//	"msg": removeTopStruct(errs.Translate(trans)),
+		//})
 		return
 	}
 	//业务逻辑处理
 	if err := logic.Login(&p); err != nil {
 		zap.L().Error("logic.Login failed", zap.String("username", p.Username), zap.Error(err))
-		c.JSON(http.StatusOK, gin.H{
-			"msg": "用户名或者密码错误",
-		})
+		//可以先进行判断用户是不是存在
+		if errors.Is(err, mysql.ErrorUserNotExist) {
+			ResponseError(c, CodeUserNotExist)
+			return
+		}
+		ResponseError(c, CodeInvalidPassword)
+		//c.JSON(http.StatusOK, gin.H{
+		//	"msg": "用户名或者密码错误",
+		//})
 		return
 	}
 	//返回响应
-	c.JSON(http.StatusOK, gin.H{
-		"msg": "登陆成功",
-	})
+	//c.JSON(http.StatusOK, gin.H{
+	//	"msg": "登陆成功",
+	//})
+	ResponseSuccess(c, nil)
 }

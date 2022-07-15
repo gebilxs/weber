@@ -1,7 +1,9 @@
 package controllers
 
 import (
+	"errors"
 	"net/http"
+	"weber/dao/mysql"
 	"weber/logic"
 	"weber/models"
 
@@ -24,16 +26,20 @@ func SignUpHandler(c *gin.Context) {
 		//判断err是不是validator,validatorErrors的错误
 		errs, ok := err.(validator.ValidationErrors)
 		if !ok {
-			c.JSON(http.StatusOK, gin.H{
-				"msg": err.Error(),
-			})
+			//c.JSON(http.StatusOK, gin.H{
+			//	"msg": err.Error(),
+			//})
+			ResponseError(c, CodeInvalidParam)
 			return
 		}
-		c.JSON(http.StatusOK, gin.H{
-			//"msg": "请求参数有错误",
-			"msg": removeTopStruct(errs.Translate(trans)), //翻译错误
-		})
+		//利用code进行简化
+		ResponseErrorWithMsg(c, CodeInvalidParam, removeTopStruct(errs.Translate(trans)))
 		return
+		//c.JSON(http.StatusOK, gin.H{
+		//	//"msg": "请求参数有错误",
+		//	"msg": removeTopStruct(errs.Translate(trans)), //翻译错误
+		//})
+		//return
 	}
 	//手动对请求参数进行判断要求返回不能为空
 	//手动进行业务规则的校验
@@ -47,13 +53,21 @@ func SignUpHandler(c *gin.Context) {
 	//2.业务处理
 	if err := logic.SignUp(&p); err != nil {
 		zap.L().Error("Logic.SignUp failed", zap.Error(err))
-		c.JSON(http.StatusOK, gin.H{
-			"msg": "注册失败",
-		})
+		if errors.Is(err, mysql.ErrorUserExist) {
+			ResponseError(c, CodeUserExist)
+			return
+		}
+		ResponseError(c, CodeServerBusy)
 		return
+
+		//c.JSON(http.StatusOK, gin.H{
+		//	"msg": "注册失败",
+		//})
+		//return
 	}
 	//3.返回相应
-	c.JSON(http.StatusOK, gin.H{
-		"msg": "success",
-	})
+	//c.JSON(http.StatusOK, gin.H{
+	//	"msg": "success",
+	//})
+	ResponseSuccess(c, nil)
 }

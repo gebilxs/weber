@@ -7,6 +7,10 @@ import (
 	"weber/models"
 )
 
+var (
+	ErrorUserExist = errors.New("用户已经存在")
+)
+
 //每一步数据库操作封装成函数
 //待logic层根据业务需求调用
 
@@ -21,7 +25,7 @@ func CheckUserExists(username string) (err error) {
 		return err
 	}
 	if count > 0 {
-		return errors.New("用户已经存在")
+		return ErrorUserExist
 	}
 	return
 }
