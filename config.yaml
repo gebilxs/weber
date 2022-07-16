@@ -1,7 +1,7 @@
 ##current app conf
 name: "weber"
 mode: "dev"
-port: 8888
+port: 8081
 version: "v1.0.0"
 start_time: "2020-07-01"
 machine_id: 1
