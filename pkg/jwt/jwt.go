@@ -7,6 +7,13 @@ import (
 	"github.com/dgrijalva/jwt-go"
 )
 
+/*备注
+在token认证的环节实际上涉及到两个token，一个是access token，另外还存在refresh token
+这个刷新的token是为了防止让access token频繁使用而出现的
+
+如何实现同一时间同一个账号只能在一台设备上面实现
+
+*/
 const TokenExpireDuration = time.Hour * 2
 
 var mySecret = []byte("xiatianxiatian")
