@@ -2,13 +2,7 @@ package mysql
 
 import (
 	"database/sql"
-	"errors"
 	"weber/models"
-)
-
-var (
-	ErrorUserNotExist    = errors.New("用户不存在")
-	ErrorInvalidPassword = errors.New("密码错误")
 )
 
 func Login(user *models.User) (err error) {

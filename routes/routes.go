@@ -35,6 +35,7 @@ func Setup(mode string) *gin.Engine {
 	v1.Use(middlewares.JWTAuthMiddleware())
 	{
 		v1.GET("/community", controllers.CommunityHandler)
+		v1.GET("/community/:id", controllers.CommunityDetailHandler)
 	}
 
 	//登陆的用户才可以访问

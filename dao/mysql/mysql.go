@@ -16,7 +16,7 @@ import (
 var db *sqlx.DB
 
 func Init(cfg *setting.MySQLConfig) (err error) {
-	dsn := fmt.Sprintf("%s:%s@tcp(%s:%d)/%s",
+	dsn := fmt.Sprintf("%s:%s@tcp(%s:%d)/%s?parseTime=true",
 		//viper.GetString("mysql.user"),
 		//viper.GetString("mysql.password"),
 		//viper.GetString("mysql.host"),

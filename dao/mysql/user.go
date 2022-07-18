@@ -3,12 +3,7 @@ package mysql
 import (
 	"crypto/md5"
 	"encoding/hex"
-	"errors"
 	"weber/models"
-)
-
-var (
-	ErrorUserExist = errors.New("用户已经存在")
 )
 
 //每一步数据库操作封装成函数
