@@ -24,7 +24,7 @@ func Setup(mode string) *gin.Engine {
 	r.GET("/", func(c *gin.Context) {
 		c.String(http.StatusOK, "OK")
 	})
-	v1 := r.Group("apv/v1")
+	v1 := r.Group("api/v1")
 	//注册业务路由
 	v1.POST("/signup", controllers.SignUpHandler)
 
@@ -32,8 +32,9 @@ func Setup(mode string) *gin.Engine {
 	v1.POST("/login", controllers.LoginHandler)
 
 	//应用JWT认证的中间件
-	v1.Use(middlewares.JWTAuthMiddleware()){
-		v1.GET("/community",controller.CommunityHandler)
+	v1.Use(middlewares.JWTAuthMiddleware())
+	{
+		v1.GET("/community", controllers.CommunityHandler)
 	}
 
 	//登陆的用户才可以访问

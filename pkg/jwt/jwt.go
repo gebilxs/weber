@@ -4,6 +4,8 @@ import (
 	"errors"
 	"time"
 
+	"github.com/spf13/viper"
+
 	"github.com/dgrijalva/jwt-go"
 )
 
@@ -14,7 +16,7 @@ import (
 如何实现同一时间同一个账号只能在一台设备上面实现
 
 */
-const TokenExpireDuration = time.Hour * 2
+const TokenExpireDuration = time.Hour * 24 * 365
 
 var mySecret = []byte("xiatianxiatian")
 
@@ -35,8 +37,8 @@ func GenToken(userID int64, username string) (string, error) {
 		userID,
 		username, // 自定义字段
 		jwt.StandardClaims{
-			ExpiresAt: time.Now().Add(TokenExpireDuration).Unix(), // 过期时间
-			Issuer:    "weber",                                    // 签发人
+			ExpiresAt: time.Now().Add(time.Duration(viper.GetInt("auth.jwt_expire")) * time.Hour).Unix(), // 过期时间
+			Issuer:    "weber",                                                                           // 签发人
 		},
 	}
 	// 使用指定的签名方法创建签名对象

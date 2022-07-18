@@ -6,6 +6,9 @@ version: "v1.0.0"
 start_time: "2020-07-01"
 machine_id: 1
 
+auth:
+  jwt_expire: 8760
+
 log:
   level: "debug"
   filename: "weber.log"
