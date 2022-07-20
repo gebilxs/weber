@@ -45,8 +45,8 @@ func GetPostById(pid int64) (data *models.ApiPostDetail, err error) {
 	return
 }
 
-func GetPostList() (data []*models.ApiPostDetail, err error) {
-	posts, err := mysql.GetPostList()
+func GetPostList(offset, limit int64) (data []*models.ApiPostDetail, err error) {
+	posts, err := mysql.GetPostList(offset, limit)
 	if err != nil {
 		return nil, err
 	}
