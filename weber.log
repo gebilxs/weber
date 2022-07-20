@@ -556,3 +556,12 @@
 {"level":"INFO","time":"2022-07-20T14:44:23.014+0800","caller":"logger/logger.go:83","msg":"/api/v1/post/270946671783841792","status":200,"method":"GET","path":"/api/v1/post/270946671783841792","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.29.0","errors":"","cost":0.0176898}
 {"level":"INFO","time":"2022-07-20T14:44:25.643+0800","caller":"weber/main.go:90","msg":"Shutdown Server ..."}
 {"level":"INFO","time":"2022-07-20T14:44:25.652+0800","caller":"weber/main.go:99","msg":"Server exiting"}
+{"level":"INFO","time":"2022-07-20T14:44:33.704+0800","caller":"logger/logger.go:83","msg":"/api/v1/post/270946671783841792","status":200,"method":"GET","path":"/api/v1/post/270946671783841792","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.29.0","errors":"","cost":0.0202411}
+{"level":"INFO","time":"2022-07-20T15:33:47.744+0800","caller":"logger/logger.go:83","msg":"/api/v1/post","status":200,"method":"GET","path":"/api/v1/post","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.29.0","errors":"","cost":0.0039908}
+{"level":"INFO","time":"2022-07-20T15:33:58.247+0800","caller":"weber/main.go:90","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2022-07-20T15:33:58.258+0800","caller":"weber/main.go:99","msg":"Server exiting"}
+{"level":"INFO","time":"2022-07-20T15:34:54.249+0800","caller":"logger/logger.go:83","msg":"/api/v1/post","status":200,"method":"GET","path":"/api/v1/post","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.29.0","errors":"","cost":0.0180676}
+{"level":"INFO","time":"2022-07-20T15:35:45.728+0800","caller":"logger/logger.go:83","msg":"/api/v1/post","status":200,"method":"POST","path":"/api/v1/post","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.29.0","errors":"","cost":0.0160473}
+{"level":"INFO","time":"2022-07-20T15:35:49.528+0800","caller":"logger/logger.go:83","msg":"/api/v1/post","status":200,"method":"GET","path":"/api/v1/post","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.29.0","errors":"","cost":0.0065337}
+{"level":"INFO","time":"2022-07-20T15:36:49.657+0800","caller":"weber/main.go:90","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2022-07-20T15:36:49.659+0800","caller":"weber/main.go:99","msg":"Server exiting"}
