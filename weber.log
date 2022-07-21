@@ -591,3 +591,5 @@
 {"level":"INFO","time":"2022-07-20T16:09:48.184+0800","caller":"logger/logger.go:83","msg":"/api/v1/posts","status":200,"method":"GET","path":"/api/v1/posts","query":"offset=4&limit=1","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.29.0","errors":"","cost":0.0009984}
 {"level":"INFO","time":"2022-07-20T20:18:08.660+0800","caller":"weber/main.go:90","msg":"Shutdown Server ..."}
 {"level":"INFO","time":"2022-07-20T20:18:08.682+0800","caller":"weber/main.go:99","msg":"Server exiting"}
+{"level":"INFO","time":"2022-07-21T15:17:49.191+0800","caller":"logger/logger.go:83","msg":"/api/v1/posts","status":200,"method":"GET","path":"/api/v1/posts","query":"offset=4&limit=1","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.29.2","errors":"","cost":0.0730399}
+{"level":"INFO","time":"2022-07-21T15:17:56.495+0800","caller":"logger/logger.go:83","msg":"/api/v1/posts","status":200,"method":"GET","path":"/api/v1/posts","query":"offset=1&limit=1","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.29.2","errors":"","cost":0.0684117}
