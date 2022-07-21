@@ -2,6 +2,7 @@ package controllers
 
 import (
 	"errors"
+	"fmt"
 	"weber/dao/mysql"
 	"weber/logic"
 	"weber/models"
@@ -34,7 +35,7 @@ func LoginHandler(c *gin.Context) {
 		return
 	}
 	//业务逻辑处理
-	token, err := logic.Login(&p)
+	user, err := logic.Login(&p)
 	if err != nil {
 		zap.L().Error("logic.Login failed", zap.String("username", p.Username), zap.Error(err))
 		//可以先进行判断用户是不是存在
@@ -52,5 +53,9 @@ func LoginHandler(c *gin.Context) {
 	//c.JSON(http.StatusOK, gin.H{
 	//	"msg": "登陆成功",
 	//})
-	ResponseSuccess(c, token)
+	ResponseSuccess(c, gin.H{
+		"user_id":   fmt.Sprintf("%d", user.UserID), //返回用户的UserID
+		"user_name": user.Username,                  //返回用户的Username
+		"token":     user.Token,                     //返回用户的token
+	})
 }
