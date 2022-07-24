@@ -9,7 +9,10 @@ import (
 	"weber/middlewares"
 	"weber/setting"
 
+	_ "weber/docs"
+
 	"github.com/gin-gonic/gin"
+	//"github.com/swaggo/gin-swagger/swaggerFiles"
 )
 
 func Setup(mode string) *gin.Engine {
@@ -21,6 +24,7 @@ func Setup(mode string) *gin.Engine {
 	r := gin.New()
 	r.Use(logger.GinLogger(), logger.GinRecovery(true))
 
+	//r.GET("/swagger/*any", gs.WrapHandler(swaggerFiles.Handler))
 	r.GET("/", func(c *gin.Context) {
 		c.String(http.StatusOK, "OK")
 	})

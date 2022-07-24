@@ -10,7 +10,6 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-// CreatePostHandler 创建帖子的处理函数
 func CommunityPostHandler(c *gin.Context) {
 	//1.获取参数及参数的校验
 

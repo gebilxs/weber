@@ -13,6 +13,18 @@ import (
 	"go.uber.org/zap"
 )
 
+// LoginHandler 登陆接口
+// @Summary 登陆接口
+// @Description 用于登陆
+// @Tags 登陆
+// @Accept application/json
+// @Produce application/json
+// @Param Authorization header string false "Bearer 用户令牌"
+// @Param object query models.ParamLogin false "查询参数"
+// @Security ApiKeyAuth
+// @Success 200 {object} _ResponsePostList
+// @Router /posts2 [get]
+// CreatePostHandler 创建帖子的处理函数
 func LoginHandler(c *gin.Context) {
 	//获取请求参数及参数校验
 	var p models.ParamLogin
