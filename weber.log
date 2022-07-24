@@ -631,3 +631,5 @@
 {"level":"INFO","time":"2022-07-24T16:22:54.800+0800","caller":"weber/main.go:99","msg":"Server exiting"}
 {"level":"INFO","time":"2022-07-24T17:18:23.399+0800","caller":"weber/main.go:104","msg":"Shutdown Server ..."}
 {"level":"INFO","time":"2022-07-24T17:18:23.414+0800","caller":"weber/main.go:113","msg":"Server exiting"}
+{"level":"INFO","time":"2022-07-24T17:35:40.121+0800","caller":"weber/main.go:104","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2022-07-24T17:35:40.132+0800","caller":"weber/main.go:113","msg":"Server exiting"}
