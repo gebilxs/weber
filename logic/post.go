@@ -2,6 +2,7 @@ package logic
 
 import (
 	"weber/dao/mysql"
+	"weber/dao/redis"
 	"weber/models"
 	"weber/pkg/snowflake"
 
@@ -13,7 +14,13 @@ func CreatePost(p *models.Post) (err error) {
 	p.ID = snowflake.GenID()
 	//2.保存到数据库
 	return mysql.CreatePost(p)
+	if err != nil {
+		return err
+	}
+	err = redis.CreatePost(p.ID)
+	return
 	//3.返回
+
 }
 
 func GetPostById(pid int64) (data *models.ApiPostDetail, err error) {

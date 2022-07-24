@@ -7,7 +7,10 @@ import (
 	"github.com/go-redis/redis"
 )
 
-var rdb *redis.Client
+var (
+	rdb *redis.Client
+	nil = redis.Nil
+)
 
 func Init(cfg *setting.RedisConfig) (err error) {
 	rdb = redis.NewClient(&redis.Options{

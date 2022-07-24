@@ -40,6 +40,8 @@ func Setup(mode string) *gin.Engine {
 		v1.POST("/post", controllers.CommunityPostHandler)
 		v1.GET("/post/:id", controllers.GetPostDetailHandler)
 		v1.GET("/posts", controllers.GetPostListHandler)
+
+		v1.POST("/vote", controllers.PostVoteHandler)
 	}
 
 	//登陆的用户才可以访问
