@@ -18,8 +18,8 @@ RUN go mod download
 # 将代码复制到容器中
 COPY . .
 
-# 将我们的代码编译成二进制可执行文件 bubble
-RUN go build -o bluebell .
+# 将我们的代码编译成二进制可执行文件 weber
+RUN go build -o weber .
 
 ###################
 # 接下来创建一个小镜像
